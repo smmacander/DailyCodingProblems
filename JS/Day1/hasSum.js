@@ -28,10 +28,14 @@ function hasSum(numsList, sum){
     return false;
 }
 
+var assert = require('assert');
+
 var setA = [10, 15, 3, 7];
 var k = 17;
-console.log(hasSum(setA, k));
+
+assert(hasSum(setA, k) == true, "Test 1 was failed!");
 
 var setB = [5, 11, 4, 9];
 var j = 3;
-console.log(hasSum(setB, j));
+
+assert(hasSum(setB, j) != true, "Test 2 was failed!");
