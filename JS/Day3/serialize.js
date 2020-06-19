@@ -55,7 +55,7 @@ function deserialize(string){
 var assert = require('assert');
 
 node = new Node('root', new Node('left', new Node('left.left')), new Node('right'));
-console.log(serialize(node));
+//console.log(serialize(node));
 if(deserialize(serialize(node)).left.left.val == 'left.left'){
     console.log("test worked!");
 }

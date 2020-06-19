@@ -1,0 +1,3 @@
+I don't think it's possible or practical to create an XOR linked list in JS because of lack of pointers.
+The C++ code is located at ../Old C++ Code/Day6.cpp.  Going forward if there's ever a situation like this
+again I'll try and do the code in C++.
