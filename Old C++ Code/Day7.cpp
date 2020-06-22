@@ -22,14 +22,21 @@ int is_char(string input){
 int getNumberofWaysToDecode(string input){
     int count;
     if(input.length() == 1){
+        cout << "Length 1" << endl;
         count = 1;
     }
     else if(input.length() == 2){
+        cout << "Length 2" << endl;
         count = 1 + is_char(input);
     }
     else{
+        cout << "else" << endl;
+        cout << input.substr(1) << endl;
         count = getNumberofWaysToDecode(input.substr(1));
+        cout << input.substr(0,2) << endl;
         if(is_char(input.substr(0,2)) == 1){
+            cout << "substr 2" << endl;
+            cout << input.substr(2) << endl;
             count += getNumberofWaysToDecode(input.substr(2));
         }
     }
@@ -37,6 +44,11 @@ int getNumberofWaysToDecode(string input){
 }
 
 int main(){
+    //cout << getNumberofWaysToDecode("81") << endl;
+    //cout << getNumberofWaysToDecode("11") << endl;
+    //cout << getNumberofWaysToDecode("111") << endl;
+    //cout << getNumberofWaysToDecode("1111") << endl;
+    //cout << getNumberofWaysToDecode("1311") << endl;
     assert(getNumberofWaysToDecode("81") == 1);
     assert(getNumberofWaysToDecode("11") == 2);
     assert(getNumberofWaysToDecode("111") == 3);
